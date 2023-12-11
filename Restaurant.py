@@ -11,6 +11,6 @@ class Restaurant(Base):
     name= Column(String)
     reviews = relationship('Review', back_populates='restaurant')
 
-    def restaurant(self):
+def restaurant(self):
         return [review.restaurant for review in self.reviews]
     

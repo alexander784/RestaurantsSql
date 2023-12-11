@@ -13,5 +13,8 @@ customer_id = Column(Integer, ForeignKey('customers.id'))
 restaurant_id = Column(Integer, ForeignKey('restaurants.id'))
 rating = Column(Integer)
 customer = relationship('Customer', back_populates='reviews')
-restaurant = relationship('Restauranr', back_populates='reviews')
+restaurant = relationship('Restaurant', back_populates='reviews')
+
+def get_reviews(self):
+    return self.reviews
 
