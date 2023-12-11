@@ -1,6 +1,7 @@
 from sqlalchemy import Column,Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
+from Customer import Customer
 
 
 Base = declarative_base()
@@ -17,4 +18,7 @@ restaurant = relationship('Restaurant', back_populates='reviews')
 
 def get_reviews(self):
     return self.reviews
+
+def full_review(self):
+    return f"Review for {self.restaurant.name} by {self.customer.full_name()}: {self.rating} stars."
 
