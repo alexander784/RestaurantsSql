@@ -17,5 +17,11 @@ class Customer(Base):
     def full_name(self):
          return f"{self.first_name} {self.last_name}"
     
+    def favorite_restaurant(self):
+         if not self.reviews:
+              return None
+         return max(self.reviews, key=lambda review:review.rating).restaurant
+    
+    
 
     
