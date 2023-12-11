@@ -9,6 +9,10 @@ from Restaurant import Restaurant
 engine = create_engine('')
 Base.metadata.create_all(engine)
 
+#Create a session
+
+Session = sessionmaker(bind=engine)
+Session = Session()
 
 
 
