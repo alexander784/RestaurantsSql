@@ -4,3 +4,11 @@ from Customer import Customer
 from Review import  Review
 from Restaurant import Restaurant
 
+##Create an engine and bind it to the Base
+
+engine = create_engine('')
+Base.metadata.create_all(engine)
+
+
+
+
