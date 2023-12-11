@@ -22,6 +22,16 @@ class Customer(Base):
               return None
          return max(self.reviews, key=lambda review:review.rating).restaurant
     
+    def add_review(self, restaurant, rating):
+        new_review = Review(customer =self, restaurant=restaurant, rating= rating)
+        self.reviews.append(new_review)
+
+    def delete_reviews(self,restaurant):
+         self.reviews= [review for review in self.reviews if review.restaurant != restaurant]
+         
+
+
+    
     
 
     
