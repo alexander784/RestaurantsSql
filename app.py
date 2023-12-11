@@ -4,6 +4,8 @@ from Customer import Customer
 from Review import  Review
 from Restaurant import Restaurant
 
+Base = declarative_base()
+
 ##Create an engine and bind it to the Base
 
 engine = create_engine('')
@@ -13,6 +15,7 @@ Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 Session = Session()
+
 
 
 

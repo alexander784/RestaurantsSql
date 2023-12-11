@@ -10,3 +10,7 @@ class Restaurant(Base):
     id = Column(Integer, primary_key=True)
     name= Column(String)
     reviews = relationship('Review', back_populates='restaurant')
+
+    def restaurant(self):
+        return [review.restaurant for review in self.reviews]
+    
