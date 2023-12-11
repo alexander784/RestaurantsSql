@@ -16,6 +16,9 @@ def restaurant(self):
 
 def fanciest(cls):
       return max(cls.query.all(), key=lambda restaurant: restaurant.price)
+
+def all_reviews(self):
+      return [review.full_review() for review in self.reviews]
  
 
     
