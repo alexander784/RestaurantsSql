@@ -21,13 +21,12 @@
 
 ## Usage
 
-1. Initialize the Database:
-      The application uses Sqlite im memory.
- 2. Run the Application: Ecute the app script to see the sample usage:
-
+1. Initialize the Database: <br>
+      The application uses Sqlite in memory.
+ 2. Run the Application: <Br>Excute the app script to see the sample usage:
       python3 app.py
 
-3. Explore the Code: Review the classes defitions in each file. Customer.py, Review.py, Restaurant.py.
+3. Explore the Code: <Br>Review the classes defitions in each file. Customer.py, Review.py, Restaurant.py.
 
 ## Author:
   Alexander Nyaga.
