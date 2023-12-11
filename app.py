@@ -9,7 +9,7 @@ Base = declarative_base()
 
 ##Create an engine and bind it to the Base
 
-engine = create_engine('')
+engine = create_engine('sqlite:///:memory:')
 Base.metadata.create_all(engine)
 
 #Create a session
